@@ -1,0 +1,112 @@
+/* ============================================================
+   GLOBAL STYLES — Abdul Rahman Portfolio
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --green: #3d5a40;
+  --green-dark: #2e4430;
+  --green-light: #4a6e4e;
+  --cream: #ece8e0;
+  --cream-dark: #ddd8cf;
+  --black: #111111;
+  --black-soft: #1a1a1a;
+  --white: #ffffff;
+  --gold: #c9963a;
+  --gold-light: #e8b84b;
+  --red-accent: #d63031;
+  --text-dark: #1a1a1a;
+  --text-muted: #666666;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Spacing */
+  --section-padding: 100px 60px;
+  --section-padding-mobile: 60px 24px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 90px;
+}
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+/* ---- SCROLL BAR ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
+
+/* ---- SECTION LABEL ---- */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red-accent);
+  margin-bottom: 12px;
+}
+
+/* ---- SECTION HEADING ---- */
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+/* ---- FADE IN ANIMATION ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* ---- RESPONSIVE CONTAINER ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
