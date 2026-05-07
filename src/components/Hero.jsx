@@ -1,6 +1,7 @@
 import './Hero.css';
 import { personalInfo } from '../data';
 import Reveal from './Reveal';
+import TypewriterTagline from './TypewriterTagline';
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
             <div className="hero__center-row">
               <div className="hero__name-block">
                 <h1 className="hero__name">{personalInfo.name}</h1>
-                <div className="hero__tagline">{personalInfo.tagline}</div>
+                <TypewriterTagline texts={personalInfo.taglines} className="hero__tagline" />
               </div>
             </div>
           </div>

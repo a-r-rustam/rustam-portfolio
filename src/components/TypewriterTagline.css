@@ -1,0 +1,172 @@
+.typewriter-tagline {
+  --typewriter-gold: var(--gold-light);
+  --typewriter-gold-soft: rgba(232, 184, 75, 0.3);
+  --typewriter-cream: var(--cream);
+  --typewriter-glass: rgba(28, 48, 32, 0.68);
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: min(var(--typewriter-min-width, 18ch), calc(100vw - 48px));
+  max-width: 100%;
+  min-height: 52px;
+  padding: 12px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(232, 184, 75, 0.58);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(30, 48, 33, 0.84), rgba(61, 90, 64, 0.54)),
+    var(--typewriter-glass);
+  box-shadow:
+    0 0 24px rgba(232, 184, 75, 0.18),
+    0 12px 34px rgba(17, 17, 17, 0.18),
+    inset 0 1px 0 rgba(236, 232, 224, 0.2),
+    inset 0 0 22px rgba(232, 184, 75, 0.08);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.typewriter-tagline::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(236, 232, 224, 0.16), transparent 38%),
+    linear-gradient(110deg, transparent 0%, rgba(232, 184, 75, 0.2) 44%, rgba(255, 255, 255, 0.12) 52%, transparent 66%);
+  opacity: 0.72;
+  transform: translateX(-120%);
+  animation: typewriterPillShimmer 5.2s ease-in-out infinite;
+}
+
+.typewriter-tagline__text {
+  position: relative;
+  z-index: 1;
+  min-width: 1ch;
+  font-family: var(--font-sans);
+  font-size: clamp(1.08rem, 2vw, 1.42rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--typewriter-cream);
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  text-shadow:
+    0 1px 0 rgba(17, 17, 17, 0.22),
+    0 0 14px rgba(232, 184, 75, 0.28);
+  animation:
+    typewriterWordIn 260ms ease both,
+    typewriterTextShimmer 4.4s ease-in-out infinite;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .typewriter-tagline__text {
+    background: linear-gradient(
+      90deg,
+      var(--cream) 0%,
+      #ffffff 24%,
+      #e8b84b 46%,
+      #f3d27a 58%,
+      var(--cream) 76%,
+      #c9963a 100%
+    );
+    background-size: 230% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.typewriter-tagline__cursor {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 2px;
+  height: 1.35em;
+  margin-left: 5px;
+  border-radius: 999px;
+  background: var(--typewriter-gold);
+  box-shadow:
+    0 0 9px var(--typewriter-gold),
+    0 0 18px var(--typewriter-gold-soft);
+  animation: typewriterCursorBlink 780ms steps(2, end) infinite;
+}
+
+@keyframes typewriterWordIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriterTextShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes typewriterPillShimmer {
+  0%, 58%, 100% {
+    transform: translateX(-120%);
+    opacity: 0.35;
+  }
+
+  78% {
+    transform: translateX(120%);
+    opacity: 0.82;
+  }
+}
+
+@keyframes typewriterCursorBlink {
+  0%, 45% {
+    opacity: 1;
+  }
+
+  46%, 100% {
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-tagline {
+    min-height: 48px;
+    padding: 11px 16px;
+  }
+
+  .typewriter-tagline__text {
+    font-size: clamp(0.98rem, 5vw, 1.16rem);
+    letter-spacing: 0.035em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-tagline,
+  .typewriter-tagline::before,
+  .typewriter-tagline__text,
+  .typewriter-tagline__cursor {
+    animation: none;
+    transition: none;
+  }
+
+  .typewriter-tagline::before {
+    transform: none;
+    opacity: 0.24;
+  }
+
+  .typewriter-tagline__cursor {
+    opacity: 1;
+  }
+}

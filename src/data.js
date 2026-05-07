@@ -4,11 +4,19 @@ export const personalInfo = {
   name: "Abdul Rahman",
   logo: "Rustam",          // Name shown in navbar logo
   tagline: "3D Modeling. UI/UX. Web Design.",
+  taglines: [
+    "UI/UX Design",
+    "3D Modeling",
+    "Web Design",
+    "Blender Artist",
+    "Visual Storytelling",
+    "Creative Direction",
+  ],
   bio: "I'm a self-taught 3D artist working in Blender — transforming default cubes into detailed worlds, one node at a time. A self-taught exploration of 3D art and visual storytelling.",
   email: "abdulrahmanrustam71@gmail.com",              
   linkedin: "https://www.linkedin.com/in/abdul-rahman-rustam-b1283537a/",
   instagram: "https://www.instagram.com/ar___rustam/",
-  github: "https://github.com/raullenchai",        
+  github: "https://github.com/a-r-rustam/rustam-portfolio/tree/main?tab=readme-ov-file#readme",        
   youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",       
 };
 
