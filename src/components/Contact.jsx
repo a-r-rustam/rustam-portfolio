@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Contact.css';
 import { personalInfo } from '../data';
+import Reveal from './Reveal';
 
 
 export default function Contact() {
@@ -28,7 +29,7 @@ export default function Contact() {
       <div className="contact__inner">
 
         {/* Left: info */}
-        <div className="contact__info">
+        <Reveal className="contact__info">
           <p className="section-label">GET IN TOUCH</p>
           <h2 className="contact__heading">Let's Work<br />Together</h2>
           <p className="contact__sub">
@@ -54,10 +55,10 @@ export default function Contact() {
               <span>YouTube</span>
             </a>
           </div>
-        </div>
+        </Reveal>
 
         {/* Right: form */}
-        <div className="contact__form-wrap">
+        <Reveal className="contact__form-wrap" delay={150}>
           <form className="contact__form" onSubmit={handleSubmit}>
             <div className="contact__field">
               <label htmlFor="name">Your Name</label>
@@ -102,7 +103,7 @@ export default function Contact() {
               {sent ? 'Opening mail app...' : 'Send Message →'}
             </button>
           </form>
-        </div>
+        </Reveal>
 
       </div>
     </section>

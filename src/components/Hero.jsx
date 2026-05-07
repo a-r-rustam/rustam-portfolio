@@ -1,21 +1,24 @@
 import './Hero.css';
 import { personalInfo } from '../data';
+import Reveal from './Reveal';
 
 export default function Hero() {
   return (
     <section id="hero" className="hero">
-      <div className="hero__top">
-        <div className="hero__top-inner">
-          <div className="hero__big-text">PORTFOLIO</div>
+      <Reveal className="hero__reveal">
+        <div className="hero__top">
+          <div className="hero__top-inner">
+            <div className="hero__big-text">PORTFOLIO</div>
 
-          <div className="hero__center-row">
-            <div className="hero__name-block">
-              <h1 className="hero__name">{personalInfo.name}</h1>
-              <div className="hero__tagline">{personalInfo.tagline}</div>
+            <div className="hero__center-row">
+              <div className="hero__name-block">
+                <h1 className="hero__name">{personalInfo.name}</h1>
+                <div className="hero__tagline">{personalInfo.tagline}</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
 
       <a href="#about" className="hero__scroll-btn">
         Scroll Down

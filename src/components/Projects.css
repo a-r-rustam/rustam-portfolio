@@ -47,6 +47,14 @@
   gap: 24px;
 }
 
+.projects__grid > .reveal {
+  display: flex;
+}
+
+.projects__grid > .reveal .project-card {
+  width: 100%;
+}
+
 /* ---- PROJECT CARD ---- */
 .project-card {
   background: #161616;

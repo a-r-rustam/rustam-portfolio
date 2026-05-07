@@ -1,18 +1,19 @@
 import './Skills.css';
 import { skills } from '../data';
+import Reveal from './Reveal';
 
 
 export default function Skills() {
   return (
     <section id="skills" className="skills">
-      <div className="skills__header">
+      <Reveal className="skills__header">
         <p className="section-label">MY ARSENAL</p>
         <h2 className="skills__title">SKILLS &amp; TECHNOLOGIES</h2>
-      </div>
+      </Reveal>
 
       <div className="skills__grid">
         {/* Category 1 — bars */}
-        <div className="skills__card">
+        <Reveal className="skills__card" delay={0}>
           <h3 className="skills__card-title">{skills.category1.title}</h3>
           <div className="skills__divider" />
           <ul className="skills__bar-list">
@@ -31,10 +32,10 @@ export default function Skills() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
         {/* Category 2 — bars */}
-        <div className="skills__card">
+        <Reveal className="skills__card" delay={120}>
           <h3 className="skills__card-title">{skills.category2.title}</h3>
           <div className="skills__divider" />
           <ul className="skills__bar-list">
@@ -53,10 +54,10 @@ export default function Skills() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
         {/* Category 3 — tags */}
-        <div className="skills__card">
+        <Reveal className="skills__card" delay={240}>
           <h3 className="skills__card-title">{skills.category3.title}</h3>
           <div className="skills__divider" />
           <div className="skills__tags">
@@ -64,7 +65,7 @@ export default function Skills() {
               <span key={tag} className="skills__tag">{tag}</span>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

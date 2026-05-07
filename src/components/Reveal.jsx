@@ -8,6 +8,11 @@ export default function Reveal({ children, className = "", delay = 0 }) {
   useEffect(() => {
     const element = ref.current;
 
+    if (!element || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,14 +25,10 @@ export default function Reveal({ children, className = "", delay = 0 }) {
       }
     );
 
-    if (element) {
-      observer.observe(element);
-    }
+    observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      observer.unobserve(element);
     };
   }, []);
 

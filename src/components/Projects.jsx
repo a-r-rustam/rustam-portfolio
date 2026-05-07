@@ -1,10 +1,11 @@
 import './Projects.css';
 import { projects } from '../data';
+import Reveal from './Reveal';
 
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <div className="projects__header">
+      <Reveal className="projects__header">
         <p className="section-label">SELECTED WORKS</p>
         <h2 className="projects__title">FEATURED PROJECTS</h2>
         <a
@@ -15,11 +16,13 @@ export default function Projects() {
         >
           View All Projects ↗
         </a>
-      </div>
+      </Reveal>
 
       <div className="projects__grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <Reveal key={project.id} delay={index * 90}>
+            <ProjectCard project={project} />
+          </Reveal>
         ))}
       </div>
     </section>
