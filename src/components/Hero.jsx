@@ -8,6 +8,12 @@ export default function Hero() {
       <Reveal className="hero__reveal">
         <div className="hero__top">
           <div className="hero__top-inner">
+            <div className="hero__outline-ad" aria-hidden="true">
+              <span>PORTFOLIO</span>
+              <span>PORTFOLIO</span>
+              <span>PORTFOLIO</span>
+            </div>
+
             <div className="hero__big-text">PORTFOLIO</div>
 
             <div className="hero__center-row">
