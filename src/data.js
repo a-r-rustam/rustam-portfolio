@@ -1,6 +1,3 @@
-// ============================================================
-// PORTFOLIO DATA — Edit everything here!
-// ============================================================
 
 // ---- PERSONAL INFO ----
 export const personalInfo = {
@@ -8,11 +5,11 @@ export const personalInfo = {
   logo: "Rustam",          // Name shown in navbar logo
   tagline: "3D Modeling. UI/UX. Web Design.",
   bio: "I'm a self-taught 3D artist working in Blender — transforming default cubes into detailed worlds, one node at a time. A self-taught exploration of 3D art and visual storytelling.",
-  email: "abdulrahmanrustam71@gmail.com",              // ← Change this
+  email: "abdulrahmanrustam71@gmail.com",              
   linkedin: "https://www.linkedin.com/in/abdul-rahman-rustam-b1283537a/",
   instagram: "https://www.instagram.com/ar___rustam/",
-  github: "https://github.com/raullenchai",         // ← Change this
-  youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",       // ← Change this
+  github: "https://github.com/raullenchai",        
+  youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",       
 };
 
 
@@ -42,22 +39,27 @@ export const skills = {
     tags: ["Photoshop", "Illustrator", "After Effects", "Premiere Pro", "VS Code", "Git / GitHub", "Notion", "Canva"],
   },
 };
-
+import project1 from "./assets/project1.png";
+import project2 from "./assets/project2.jpg";
+import project3 from "./assets/project3.webp";
+import project4 from "./assets/project4.avif";
+import project5 from "./assets/project5.jpg";
+import project6 from "./assets/project6.png";
 
 export const projects = [
   {
     id: 1,
     title: "3D Environment — Free Addons",
     description: "A detailed addon list for environment built in Blender with realistic lighting, volumetric fog, and procedural textures.",
-    image: "src/assets/Project 1.png",          // e.g. "/projects/forest.jpg"
+    image: project1,          
     tags: ["Blender", "3D Art", "Lighting"],
-    projectUrl: "https://www.youtube.com/watch?v=Cw7HPJwfsw0",   // ← Paste your project link here
+    projectUrl: "https://www.youtube.com/watch?v=Cw7HPJwfsw0",   
   },
   {
     id: 2,
     title: "Character Design — Sci-Fi Suit",
     description: "Hard-surface character model with intricate mechanical details, fully rigged and rendered in Cycles.",
-    image: "src/assets/cp.jpg",
+    image: project2,
     tags: ["Blender", "Character", "Hard Surface"],
     projectUrl: "https://behance.net",
   },
@@ -65,7 +67,7 @@ export const projects = [
     id: 3,
     title: "UI/UX — Task Manager App",
     description: "A clean and minimal task management app designed in Figma with dark mode, full prototype, and component library.",
-    image: "src/assets/TM.webp",
+    image: project3,
     tags: ["Figma", "UI/UX", "App Design"],
     projectUrl: "https://behance.net",
   },
@@ -73,7 +75,7 @@ export const projects = [
     id: 4,
     title: "Brand Identity — Logo & Visual",
     description: "Complete brand identity package including logo design, color palette, typography, and brand guidelines.",
-    image: "src/assets/brand.avif",
+    image: project4,
     tags: ["Branding", "Illustrator", "Logo"],
     projectUrl: "https://behance.net",
   },
@@ -81,7 +83,7 @@ export const projects = [
     id: 5,
     title: "Motion — Product Visualization",
     description: "Product 3D animation and visualization for a concept smart device, rendered with photorealistic materials.",
-    image: "src/assets/illusion.jpg",
+    image: project5,
     tags: ["Blender", "Motion", "3D"],
     projectUrl: "https://behance.net",
   },
@@ -89,8 +91,8 @@ export const projects = [
     id: 6,
     title: "Web Design — Personal Portfolio",
     description: "This very portfolio website — designed in Figma and built with Vite + React, responsive and blazing fast.",
-    image: "src/assets/Port.png",
+    image: project6,
     tags: ["Web Design", "React", "Figma"],
-    projectUrl: "http://localhost:5173/#about",
+    projectUrl: "https://rustam-portfolio-phi.vercel.app/#about",
   },
 ];
