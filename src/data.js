@@ -9,8 +9,9 @@ export const personalInfo = {
     "3D Modeling",
     "Web Design",
     "Blender Artist",
-    "Visual Storytelling",
-    "Creative Direction",
+    "Chai hojae?",
+    
+    
   ],
   bio: "I'm a self-taught 3D artist working in Blender — transforming default cubes into detailed worlds, one node at a time. A self-taught exploration of 3D art and visual storytelling.",
   email: "abdulrahmanrustam71@gmail.com",              
